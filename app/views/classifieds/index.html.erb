@@ -1,0 +1,14 @@
+<h1>Classifieds</h1>
+
+<section>
+  <% @classifieds.each do |classified| %>
+    <article>
+      <h2><%= classified.title %></h2>
+
+      <p><%= classified.description %></p>
+
+      <div><%="$#{classified.price}" %></div>
+      <div><%= classified.category %> </div>
+    </article>
+  <% end %>
+</section>
