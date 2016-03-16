@@ -1,0 +1,10 @@
+<h1>Your Classified</h1>
+
+<article>
+  <h2><%= @classified.title %></h2>
+
+  <p><%= @classified.description %></p>
+
+  <div><%="$#{@classified.price}" %></div>
+  <div><%= @classified.category.name %> </div>
+</article>

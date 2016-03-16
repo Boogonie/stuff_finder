@@ -7,12 +7,12 @@
   </div>
   <div>
     <%= form.label :description %>
-    <%= form.textarea :description %>
+    <%= form.text_area :description %>
   </div>
   <div>
     <%= fields_for @classified.category do |category_form| %>
       <%= category_form.label :name %>
-      <%= category_form.textarea :name %>
+      <%= category_form.text_field :name %>
     <% end %>
   </div>
   <div>
@@ -20,5 +20,5 @@
     <%= form.text_field :price %>
   </div>
   <%= form.submit "Create Classified" %>
-  
+
 <% end %>
