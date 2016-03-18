@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-
   root 'welcome#index'
-
+  devise_for :users
   resources :categories,  only: [ :show ]
-  resources :classifieds, only: [ :new, :create, :index, :show ]
+  resources :classifieds, only: [ :new, :create, :index, :show ] do
+    get 'my', on: :collection
+
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
